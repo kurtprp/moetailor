@@ -1,0 +1,8 @@
+{"text": "Write a Python function that parses a CSV and returns the median of a column, with tests.", "tag": "code"}
+{"text": "Explain the difference between a Roth IRA and a traditional IRA for someone retiring early.", "tag": "writing"}
+{"text": "Debug this: TypeError: list indices must be integers in a loop over a dict.", "tag": "code"}
+{"text": "Summarise the trade-offs of pruning MoE experts vs quantizing them.", "tag": "reasoning"}
+{"text": "Call the search tool to find the current price of NVDA, then summarise it in one sentence.", "tag": "tools"}
+{"text": "What is 17 * 23 + 41? Show your working.", "tag": "math"}
+{"text": "Draft an Instagram caption about hitting $1M at 33 and second-guessing it, in a FIRE voice.", "tag": "writing"}
+{"text": "Write a SQL query to find users who signed up in the last 30 days and made no purchase.", "tag": "code"}

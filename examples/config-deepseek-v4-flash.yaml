@@ -1,0 +1,18 @@
+# moetailor config — DeepSeek V4 Flash (your model)
+# 284B total, 256 routed experts, 43 layers, top-6
+# REAP 150B keeps 132 experts. This config targets a *personal*
+# 132-expert model, but from YOUR prompts, not the generic mix.
+model: deepseek-ai/DeepSeek-V4-Flash-0731
+prompts: examples/calibration-prompts.jsonl
+holdout_frac: 0.10
+target_keep_rate: 0.52  # 132/256 ≈ 0.516
+min_keep: 0.30
+max_keep: 0.80
+guard_max_gate: 0.5
+guard_max_freq: 0.01
+guard_reserve: 4
+output_dir: runs/deepseek-v4-flash-my-reap
+# After pruning, the safetensors output loads in colibri with
+# no conversion, like puwaer/DeepSeek-V4-Flash-0731-reap-150b.
+# Expected: ~85 GB on disk, ~95-110 GB total without colibri,
+# 16 GB RAM min / 32 GB comfortable with colibri.
