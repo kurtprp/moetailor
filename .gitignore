@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+models/
+*.safetensors
+!examples/*.jsonl
+output/
+runs/
+.DS_Store

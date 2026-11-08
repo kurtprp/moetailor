@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moetailor"
+version = "0.1.0"
+description = "Personalized MoE expert pruning: REAP for YOUR prompts, on YOUR hardware, with proof."
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [{name = "Cagatay"}]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "safetensors>=0.4",
+    "click>=8.1",
+    "pyyaml>=6.0",
+    "tqdm>=4.65",
+]
+[project.optional-dependencies]
+hf = [
+    "torch>=2.2",
+    "transformers>=4.44",
+    "datasets>=2.20",
+]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.5",
+]
+
+[project.scripts]
+moetailor = "moetailor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
